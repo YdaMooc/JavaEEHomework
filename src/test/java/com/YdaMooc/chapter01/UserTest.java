@@ -35,6 +35,7 @@ public class UserTest {
 
     @Test
     public void findAllUser() throws IOException {
+        /** 输出所有的user信息 **/
         InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
         SqlSession sqlsession = sqlSessionFactory.openSession();
@@ -47,6 +48,7 @@ public class UserTest {
 
     @Test
     public void homeWork() {
+        /** 练习 **/
         String resources = "mybatis-config.xml";
         Reader reader = null;
         try {
