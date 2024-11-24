@@ -5,6 +5,20 @@
 <configuration>
     <!-- 引入外部db.properties -->
     <properties resource="db.properties"/>
+
+    <settings>
+        <!-- 开启 驼峰命名与下划线命名的映射 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!-- 开启别名映射 -->
+    <typeAliases>
+        <!-- 第一种方法，针对于少量类型的情况 -->
+        <!--        <typeAlias type="com.YdaMooc.chapter01.pojo.User" alias="user"/>-->
+        <!-- 第二种方法（推荐用法），包扫描，针对于大量类型的情况，默认实体的类名就是别名（不区分大小写） -->
+        <package name="com.YdaMooc.chapter01.pojo"/>
+    </typeAliases>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
