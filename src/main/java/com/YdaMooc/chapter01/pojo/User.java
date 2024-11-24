@@ -1,40 +1,40 @@
 package com.YdaMooc.chapter01.pojo;
 
 public class User {
-    private int uid;
-    private String uname;
-    private int uage;
+    private int userId;
+    private String userName;
+    private int userAge;
 
-    public int getUid() {
-        return uid;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getUname() {
-        return uname;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public int getUage() {
-        return uage;
+    public int getUserAge() {
+        return userAge;
     }
 
-    public void setUage(int uage) {
-        this.uage = uage;
+    public void setUserAge(int userAge) {
+        this.userAge = userAge;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "uid=" + uid +
-                ", uname='" + uname + '\'' +
-                ", uage=" + uage +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", userAge=" + userAge +
                 '}';
     }
 }

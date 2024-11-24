@@ -59,7 +59,7 @@ public class UserTest {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
         SqlSession sqlSession = sqlSessionFactory.openSession();
         User user = sqlSession.selectOne("findById", 1);
-        System.out.println(user.getUname());
+        System.out.println(user.getUserName());
         sqlSession.close();
     }
 }

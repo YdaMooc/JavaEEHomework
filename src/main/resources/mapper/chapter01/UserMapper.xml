@@ -8,6 +8,6 @@
             resultType="com.YdaMooc.chapter01.pojo.User">
         SELECT *
         FROM users
-        WHERE uid = #{id}
+        WHERE user_id = #{id}
     </select>
 </mapper>

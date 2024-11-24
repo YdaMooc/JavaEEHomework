@@ -11,7 +11,7 @@
  Target Server Version : 80033
  File Encoding         : 65001
 
- Date: 24/11/2024 01:23:49
+ Date: 24/11/2024 11:21:08
 */
 
 SET NAMES utf8mb4;
@@ -22,10 +22,10 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users`  (
-  `uid` int(0) NOT NULL AUTO_INCREMENT,
-  `uname` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `uage` int(0) NOT NULL,
-  PRIMARY KEY (`uid`) USING BTREE
+  `user_id` int(0) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `user_age` int(0) NOT NULL,
+  PRIMARY KEY (`user_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
