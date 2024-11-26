@@ -17,3 +17,12 @@
 
 3. Spring MVC
     - [ ] chapter10 - Spring MVC入门程序
+    - [ ] chapter11 - Spring MVC配置请求映射方式
+    - [ ] chapter12 - Spring MVC数据绑定和响应
+    - [ ] chapter13 - 后台系统登录验证 (Spring MVC的高级功能)
+
+4. SSM框架整合
+    - [ ] chapter14 - Spring、Spring MVC和MyBatis整合
+
+5. 项目综合实战
+    - [ ] chapter15 - 云借阅图书管理系统
