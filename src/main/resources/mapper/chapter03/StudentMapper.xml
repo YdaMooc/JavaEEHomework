@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.YdaMooc.chapter03.pojo.Student">
+    <select id="findStudentByNameAndMajor"
+            parameterType="com.YdaMooc.chapter03.pojo.Student"
+            resultType="com.YdaMooc.chapter03.pojo.Student">
+        SELECT *
+        FROM t_student
+        WHERE 1 = 1
+        <choose>
+            <when test="name != null and name != ''">
+                AND name LIKE CONCAT('%', #{name},'%')
+            </when>
+            <when test="major != null and major != ''">
+                AND major = #{major}
+            </when>
+            <otherwise>
+                AND sno IS NOT NULL
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findByList"
+            parameterType="java.util.List"
+            resultType="com.YdaMooc.chapter03.pojo.Student">
+        SELECT *
+        FROM t_student
+        WHERE id IN
+        <foreach item="id"
+                 index="index"
+                 collection="list"
+                 open="("
+                 separator=","
+                 close=")">
+            #{id}
+        </foreach>
+    </select>
+</mapper>
