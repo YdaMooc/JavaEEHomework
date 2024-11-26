@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.YdaMooc.chapter04.pojo.Category">
+    <resultMap id="CategoryWithProductResult" type="com.YdaMooc.chapter04.pojo.Category">
+        <id property="id" column="id"/>
+        <result property="typename" column="typename"/>
+        <collection property="productList"
+                    ofType="com.YdaMooc.chapter04.pojo.Product">
+            <id property="id" column="category_id"/>
+            <result property="goodsName" column="goods_name"/>
+            <result property="price" column="price"/>
+        </collection>
+    </resultMap>
+
+    <resultMap id="CategoryWithProductResult2" type="com.YdaMooc.chapter04.pojo.Category">
+        <id property="id" column="id"/>
+        <result property="typename" column="typename"/>
+        <collection property="productList"
+                    column="id"
+                    ofType="com.YdaMooc.chapter04.pojo.Product"
+                    select="com.YdaMooc.chapter04.pojo.Product.findProductById">
+        </collection>
+    </resultMap>
+
+    <select id="findCategoryWithProduct"
+            parameterType="integer"
+            resultMap="CategoryWithProductResult">
+        SELECT c.*, p.id AS category_id, p.goods_name, p.price
+        FROM category c,
+             product p
+        WHERE c.id = p.category_id
+          AND c.id = #{id}
+    </select>
+
+    <select id="findCategoryWithProduct2"
+            parameterType="integer"
+            resultMap="CategoryWithProductResult2">
+        SELECT *
+        FROM category
+        WHERE id = #{id}
+    </select>
+</mapper>

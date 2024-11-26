@@ -19,6 +19,7 @@
         <package name="com.YdaMooc.chapter01.pojo"/>
         <package name="com.YdaMooc.chapter02.pojo"/>
         <package name="com.YdaMooc.chapter03.pojo"/>
+        <package name="com.YdaMooc.chapter04.pojo"/>
     </typeAliases>
 
     <environments default="development">
@@ -37,5 +38,7 @@
         <mapper resource="mapper/chapter01/UserMapper.xml"/>
         <mapper resource="mapper/chapter02/EmployeeMapper.xml"/>
         <mapper resource="mapper/chapter03/StudentMapper.xml"/>
+        <mapper resource="mapper/chapter04/CategoryMapper.xml"/>
+        <mapper resource="mapper/chapter04/ProductMapper.xml"/>
     </mappers>
 </configuration>
