@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.YdaMooc.chapter02.pojo.Employee">
+    <resultMap id="employeeMap" type="com.YdaMooc.chapter02.pojo.Employee">
+        <id property="id" column="eid"/>
+        <result property="name" column="ename"/>
+        <result property="age" column="eage"/>
+        <result property="position" column="eposition"/>
+    </resultMap>
+
+    <select id="findAllEmployee" resultMap="employeeMap">
+        SELECT *
+        FROM t_employee;
+    </select>
+
+    <select id="findEmployeeById" parameterType="integer" resultMap="employeeMap">
+        SELECT *
+        FROM t_employee
+        WHERE eid = #{id}
+    </select>
+
+    <insert id="addEmployee" parameterType="com.YdaMooc.chapter02.pojo.Employee">
+        INSERT INTO t_employee(ENAME, EAGE, EPOSITION) VALUE (#{name}, #{age}, #{position})
+    </insert>
+
+    <update id="updateEmployee" parameterType="com.YdaMooc.chapter02.pojo.Employee">
+        UPDATE t_employee
+        SET ename     = #{name},
+            eage      = #{age},
+            eposition = #{position}
+        WHERE eid = #{id}
+    </update>
+
+    <delete id="deleteEmployeeById" parameterType="integer">
+        DELETE
+        FROM t_employee
+        WHERE eid = #{id}
+    </delete>
+
+</mapper>

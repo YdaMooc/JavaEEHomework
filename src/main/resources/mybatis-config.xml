@@ -33,5 +33,6 @@
     <mappers>
         <!-- 配置xxxMapper.xml文件的位置 -->
         <mapper resource="mapper/chapter01/UserMapper.xml"/>
+        <mapper resource="mapper/chapter02/EmployeeMapper.xml"/>
     </mappers>
 </configuration>
