@@ -40,5 +40,7 @@
         <mapper resource="mapper/chapter03/StudentMapper.xml"/>
         <mapper resource="mapper/chapter04/CategoryMapper.xml"/>
         <mapper resource="mapper/chapter04/ProductMapper.xml"/>
+        <mapper class="com.YdaMooc.chapter05.dao.StudentMapper"/>
+        <mapper class="com.YdaMooc.chapter05.dao.ClassMapper"/>
     </mappers>
 </configuration>
