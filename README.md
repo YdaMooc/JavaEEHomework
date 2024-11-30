@@ -10,7 +10,7 @@
     - [x] chapter05 - 学生管理系统 (MyBatis的注解开发)
 
 2. Spring
-    - [ ] chapter06 - Spring的入门程序
+    - [x] chapter06 - Spring的入门程序
     - [ ] chapter07 - 基于注解测试Bean的生命周期
     - [ ] chapter08 - 实现基于注解的AOP
     - [ ] chapter09 - 实现用户登录 (Spring的数据库编程)

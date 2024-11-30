@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- set注入 -->
+    <bean id="helloService" class="com.YdaMooc.chapter06.service.impl.HelloServiceImpl">
+        <!-- userName、userDao属性需要set注入 -->
+        <property name="userName" value="张三"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean id="userDao" class="com.YdaMooc.chapter06.dao.impl.UserDaoImpl"/>
+</beans>
