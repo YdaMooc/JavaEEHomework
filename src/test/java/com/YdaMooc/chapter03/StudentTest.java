@@ -31,9 +31,9 @@ public class StudentTest {
 
     @Test
     public void findByListTest() {
-        // ´´½¨List¼¯ºÏ£¬·â×°²éÑ¯id
+        // åˆ›å»ºListé›†åˆï¼Œå°è£…æŸ¥è¯¢id
         List<Integer> ids = new ArrayList<Integer>();
-        // ½«Ğ¡ÓÚ5µÄidÖµ·ÅÈëListÖĞ
+        // å°†å°äº5çš„idå€¼æ”¾å…¥Listä¸­
         for (int i = 1; i < 5; i++) {
             ids.add(i);
         }

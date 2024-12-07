@@ -15,27 +15,27 @@ public class UserTest {
 
     @Test
     public void findById() throws IOException {
-        // 1. 获取核心配置文件
+        // 1. 鑾峰彇鏍稿績閰嶇疆鏂囦欢
         InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
 
-        // 2. 创建sqlSessionFactory工厂对象
+        // 2. 鍒涘缓sqlSessionFactory宸ュ巶瀵硅薄
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
-        // 3. 创建sqlSession对象
+        // 3. 鍒涘缓sqlSession瀵硅薄
         SqlSession sqlsession = sqlSessionFactory.openSession();
 
-        // 4. 执行sql语句，sql语句的唯一标识：namespace.statementId
+        // 4. 鎵цsql璇彞锛宻ql璇彞鐨勫敮涓�鏍囪瘑锛歯amespace.statementId
         User user = sqlsession.selectOne("com.YdaMooc.chapter01.pojo.User.findById", 1);
 
         System.out.println(user.toString());
 
-        // 5. 释放资源
+        // 5. 閲婃斁璧勬簮
         sqlsession.close();
     }
 
     @Test
     public void findAllUser() throws IOException {
-        /** 输出所有的user信息 **/
+        /** 杈撳嚭鎵�鏈夌殑user淇℃伅 **/
         InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
         SqlSession sqlsession = sqlSessionFactory.openSession();
@@ -48,7 +48,7 @@ public class UserTest {
 
     @Test
     public void homeWork() {
-        /** 练习 **/
+        /** 缁冧範 **/
         String resources = "mybatis-config.xml";
         Reader reader = null;
         try {

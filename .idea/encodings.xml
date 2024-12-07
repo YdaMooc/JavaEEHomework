@@ -4,7 +4,10 @@
     <file url="file://$PROJECT_DIR$/README.md" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/YdaMooc/chapter01/UserTest.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/test/java/com/YdaMooc/chapter02/EmployeeTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/YdaMooc/chapter03/StudentTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/YdaMooc/chapter05/StudentsTest.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/test/java/com/YdaMooc/chapter06/helloTest.java" charset="UTF-8" />
   </component>
 </project>

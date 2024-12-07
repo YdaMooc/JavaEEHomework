@@ -4,7 +4,7 @@ import com.YdaMooc.chapter05.dao.ClassMapper;
 import com.YdaMooc.chapter05.dao.StudentMapper;
 import com.YdaMooc.chapter05.pojo.Class;
 import com.YdaMooc.chapter05.pojo.Students;
-import com.YdaMooc.chapter05.utils.JDBCUtils;
+import com.YdaMooc.utils.JDBCUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.After;
 import org.junit.Before;
@@ -20,7 +20,7 @@ public class StudentsTest {
         sqlSession = JDBCUtils.getSqlSession();
     }
 
-    // ²éÑ¯Ñ§ÉúÐÅÏ¢
+    // ï¿½ï¿½Ñ¯Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢
     @Test
     public void findStudentByIdTest() {
         StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
@@ -28,7 +28,7 @@ public class StudentsTest {
         System.out.println(student.toString());
     }
 
-    // ²éÑ¯°à¼¶ÐÅÏ¢£¬Ò»¶Ô¶à²éÑ¯°à¼¶Ñ§ÉúÐÅÏ¢
+    // ï¿½ï¿½Ñ¯ï¿½à¼¶ï¿½ï¿½Ï¢ï¿½ï¿½Ò»ï¿½Ô¶ï¿½ï¿½Ñ¯ï¿½à¼¶Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢
     @Test
     public void findAllClassTest() {
         ClassMapper mapper = sqlSession.getMapper(ClassMapper.class);
@@ -36,7 +36,7 @@ public class StudentsTest {
         System.out.println(cls.toString());
     }
 
-    // ¸ù¾Ý°à¼¶id²éÕÒ¶ÔÓ¦Ñ§Éú
+    // ï¿½ï¿½ï¿½Ý°à¼¶idï¿½ï¿½ï¿½Ò¶ï¿½Ó¦Ñ§ï¿½ï¿½
     @Test
     public void findStudentByClassIdTest() {
         StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);

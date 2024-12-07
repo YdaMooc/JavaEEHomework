@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- set注入 -->
     <bean id="helloService" class="com.YdaMooc.chapter06.service.impl.HelloServiceImpl">
@@ -12,4 +15,8 @@
     </bean>
 
     <bean id="userDao" class="com.YdaMooc.chapter06.dao.impl.UserDaoImpl"/>
+
+    <!-- 开启自动扫描功能，注解装配处理器 -->
+    <context:component-scan base-package="com.YdaMooc"/>
+
 </beans>
